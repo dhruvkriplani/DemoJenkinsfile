@@ -3,8 +3,10 @@ pipeline
 agent any
 stages{
 stage('Compile'){
+steps{
 withMaven(maven:'maven-3-8-6'){
 sh 'mvn clean compile'
+}
 }
 }
 stage('Test'){

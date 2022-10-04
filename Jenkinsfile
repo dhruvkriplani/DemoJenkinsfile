@@ -2,24 +2,10 @@ pipeline
 {
 agent any
 stages{
-stage('Compile'){
+stage('hello'){
 steps{
-withMaven(maven:'maven-3-8-6'){
-sh 'mvn clean compile'
+echo "Hello World"
 }
 }
 }
-stage('Test'){
-steps{
-withMaven(maven:'maven3-8-6'){
-sh 'mvn test'
-}
-}
-}
-stage('Deploy'){
-steps{
-withMaven(maven:'maven-3-8-6'){
-sh 'mvn deploy'
-}}}
-}
-}
+

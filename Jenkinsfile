@@ -11,7 +11,7 @@ bat 'mvn clean compile'
 }
 stage('Test'){
 steps{
-withMaven(maven:'maven3-8-6'){
+withMaven(maven:'maven-3-8-6'){
 bat 'mvn test'
 }
 }

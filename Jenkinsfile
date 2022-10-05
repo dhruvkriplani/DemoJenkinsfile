@@ -5,21 +5,21 @@ stages{
 stage('Compile'){
 steps{
 withMaven(maven:'maven-3-8-6'){
-echo "Compiled"
+bat 'mvn clean compile'
 }
 }
 }
 stage('Test'){
 steps{
 withMaven(maven:'maven3-8-6'){
-echo "Tested"
+bat 'mvn test'
 }
 }
 }
 stage('Deploy'){
 steps{
 withMaven(maven:'maven-3-8-6'){
-echo "Deployed"
+bat 'mvn deploy'
 }}}
 }
-}
+

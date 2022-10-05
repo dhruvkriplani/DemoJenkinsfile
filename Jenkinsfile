@@ -22,4 +22,4 @@ withMaven(maven:'maven-3-8-6'){
 bat 'mvn deploy'
 }}}
 }
-
+}
